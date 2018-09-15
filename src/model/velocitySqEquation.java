@@ -37,34 +37,34 @@ public class velocitySqEquation extends Equation {
      * solves equation to find the velocity
      * */
     private void solveForV(){
-
+        this.v = Math.sqrt((this.v0 * this.v0) + (2.0 * this.a * (this.x - this.x0)));
     }
 
     /*
      * solves equation to find the initial velocity
      * */
     private void solveForV0(){
-
+        this.v0 = Math.sqrt((this.v * this.v) - (2.0 * this.a * (this.x - this.x0)));
     }
 
     /*
      * solves equation to find the acceleration
      * */
     private void solveForA(){
-
+        this.a = (((this.v * this.v) - (this.v0 * this.v0))/ (this.x - this.x0)) / 2.0;
     }
 
     /*
      * solves equation to find the distance
      * */
     private void solveForX(){
-
+        this.x = ((((this.v * this.v) - (this.v0 * this.v0))/2.0)/this.a) + this.x0;
     }
 
     /*
      * solves equation to find the initial distance
      * */
     private void solveForX0(){
-
+        this.x0 = this.x - ((((this.v * this.v) - (this.v0 * this.v0))/2.0)/this.a);
     }
 }

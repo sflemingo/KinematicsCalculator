@@ -37,34 +37,39 @@ public class displacementAccelerationEquation extends Equation {
      * solves equation to find the distance
      * */
     private void solveForX(){
-
+        this.x = this.x0 + (this.v0 * this.t) + (.5 * (this.a * (this.t * this.t)));
     }
 
     /*
      * solves equation to find the initial distance
      * */
     private void solveForX0(){
-
+        this.x0 = this.x - (.5 * (this.a * (this.t * this.t))) - (this.v0 * this.t);
     }
 
     /*
      * solves equation to find the initial velocity
      * */
     private void solveForV0(){
-
+        this.v0 = (this.x - this.x0 - (.5 * (this.a * (this.t * this.t))) / this.t);
     }
 
     /*
      * solves equation to find the time
+     * uses quadratic formula
      * */
     private void solveForT(){
-
+        double a = this.a * .5;
+        double b = this.v0;
+        double c = this.x0 - this.x;
+        //quadratic formula
+        this.t = ((0.0 - b) + Math.sqrt((b * b) - (4.0 * a * c))) / (2.0 * a);
     }
 
     /*
      * solves equation to find the acceleration
      * */
     private void solveForA(){
-
+        this.a = ((this.x - this.x0 - (this.v0 * this.t)) * 2.0) / (this.t * this.t);
     }
 }
