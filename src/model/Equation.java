@@ -24,6 +24,21 @@ public abstract class Equation {
     }
 
     /*
+     * getVariable method
+     * @param variable the type of variable ex: "a" for acceleration
+     * @return the value of the variable
+     * */
+    public Double getVariable(String variable){
+        if (variable.equals("x0")) return x0;
+        if (variable.equals("x")) return x;
+        if (variable.equals("v0")) return v0;
+        if (variable.equals("v")) return v;
+        if (variable.equals("a")) return a;
+        if (variable.equals("t")) return t;
+        return null;
+    }
+
+    /*
      * abstract method to solve the equation
      * finds unknown variable and solves for it
      * */
