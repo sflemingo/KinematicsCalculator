@@ -29,7 +29,4 @@ public abstract class Equation {
      * */
     public abstract int solve();
 
-    public static void main(String[] args){
-        System.out.print("abc");
-    }
 }

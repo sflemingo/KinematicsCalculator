@@ -5,7 +5,7 @@
 
 package model;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class velocityEquation extends Equation {
 
@@ -13,7 +13,7 @@ public class velocityEquation extends Equation {
      * constructor for velocityEquation class
      * @param variables the known/unknown variables
      * */
-    public velocityEquation(HashMap<String, Double> variables){
+    public velocityEquation(Map<String, Double> variables){
         super(variables);
     }
 

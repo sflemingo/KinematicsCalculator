@@ -5,7 +5,7 @@
 
 package model;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class displacementEquation extends Equation {
 
@@ -13,7 +13,7 @@ public class displacementEquation extends Equation {
      * constructor for Equation class
      * @param variables the known/unknown variables
      * */
-    public displacementEquation(HashMap<String, Double> variables){
+    public displacementEquation(Map<String, Double> variables){
         super(variables);
     }
 
