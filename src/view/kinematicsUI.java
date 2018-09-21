@@ -36,19 +36,19 @@ public class kinematicsUI {
         kC.setDisplacement(null);
         kC.setTime(null);
 
-        for (int i = 0; i < args.length; i++){
-            if (args[i].startsWith("a:"))
-                kC.setAcceleration(Double.valueOf(args[i].substring(2)));
-            if (args[i].startsWith("v:"))
-                kC.setVelocity(Double.valueOf(args[i].substring(2)));
-            if (args[i].startsWith("v0:"))
-                kC.setInitialVelocity(Double.valueOf(args[i].substring(3)));
-            if (args[i].startsWith("x:"))
-                kC.setDisplacement(Double.valueOf(args[i].substring(2)));
-            if (args[i].startsWith("x0:"))
-                kC.setInitialDisplacement(Double.valueOf(args[i].substring(3)));
-            if (args[i].startsWith("t:"))
-                kC.setTime(Double.valueOf(args[i].substring(2)));
+        for (String s: args){
+            if (s.startsWith("a:"))
+                kC.setAcceleration(Double.valueOf(s.substring(2)));
+            if (s.startsWith("v:"))
+                kC.setVelocity(Double.valueOf(s.substring(2)));
+            if (s.startsWith("v0:"))
+                kC.setInitialVelocity(Double.valueOf(s.substring(3)));
+            if (s.startsWith("x:"))
+                kC.setDisplacement(Double.valueOf(s.substring(2)));
+            if (s.startsWith("x0:"))
+                kC.setInitialDisplacement(Double.valueOf(s.substring(3)));
+            if (s.startsWith("t:"))
+                kC.setTime(Double.valueOf(s.substring(2)));
         }
 
         kC.solve();
@@ -59,6 +59,8 @@ public class kinematicsUI {
         System.out.println("x0:\t" + kC.getVariable("x0"));
         System.out.println("x:\t" + kC.getVariable("x"));
         System.out.println("t:\t" + kC.getVariable("t"));
+
+        /*  Code below prints out situation as a sentence or two */
 
         System.out.println();
         boolean useAnd = false;
