@@ -3,7 +3,7 @@ Calculator for solving simple physics kinematics problems
 
 Prints a list of all the known and solved variables, followed by a short statement of the situation.
 
-Variables are:
+Variables:
 
 	a = acceleration in meters/second^2
 	v0 = initial velocity in meters/second
@@ -12,9 +12,12 @@ Variables are:
 	x = displacement in meters
 	t = time in seconds
 
-use (optional) known variables as arguments in any order
-example:	java kinematicsUI t:2.3 a:-9.8 v0:16.2
+Use as many known variables as needed in any order.
+Put in variables as arguments like this:
+
+	java kinematicsUI t:2.3 a:-9.8 v0:16.2
 output:
+
 	a:	-9.8
 	v0:	16.2
 	v:	-6.34
