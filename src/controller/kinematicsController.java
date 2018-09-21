@@ -1,5 +1,6 @@
 /*
  * kinematicsController class
+ * connects the model package to the view package
  * */
 package controller;
 
@@ -30,71 +31,78 @@ public class kinematicsController {
     }
 
     public void setAcceleration(Double a){
-        variables.replace("a", a);
+        variables.put("a", a);
     }
 
     public void setInitialDisplacement(Double x0){
-        variables.replace("x0", x0);
+        variables.put("x0", x0);
     }
 
     public void setDisplacement(Double x){
-        variables.replace("x", x);
+        variables.put("x", x);
     }
 
     public void setInitialVelocity(Double v0){
-        variables.replace("v0", v0);
+        variables.put("v0", v0);
     }
 
     public void setVelocity(Double v){
-        variables.replace("v", v);
+        variables.put("v", v);
     }
 
     public void setTime(Double t){
-        variables.replace("t", t);
+        variables.put("t", t);
     }
 
     /*
      * Utilizes model and solves for unknowns
+     *
+     * recursive function that stops when no other variables were set
      * */
     public void solve(){
+        boolean equSolved = true;
         Equation eq = new velocityEquation(variables);
-        int i = eq.solve();
-        if (i == 0){
+
+        if (eq.solve() == 0){
             setVelocity(eq.getVariable("v"));
             setInitialVelocity(eq.getVariable("v0"));
             setAcceleration(eq.getVariable("a"));
             setTime(eq.getVariable("t"));
+            equSolved = false;
         }
 
         eq = new velocitySqEquation(variables);
-        i = eq.solve();
-        if (i == 0){
+        if (eq.solve() == 0){
             setVelocity(eq.getVariable("v"));
             setInitialVelocity(eq.getVariable("v0"));
             setAcceleration(eq.getVariable("a"));
             setDisplacement(eq.getVariable("x"));
             setInitialDisplacement(eq.getVariable("x0"));
+            equSolved = false;
         }
 
         eq = new displacementEquation(variables);
-        i = eq.solve();
-        if (i == 0){
+        if (eq.solve() == 0){
             setVelocity(eq.getVariable("v"));
             setInitialVelocity(eq.getVariable("v0"));
             setTime(eq.getVariable("t"));
             setDisplacement(eq.getVariable("x"));
             setInitialDisplacement(eq.getVariable("x0"));
+            equSolved = false;
         }
 
         eq = new displacementAccelerationEquation(variables);
-        i = eq.solve();
-        if (i == 0){
+        if (eq.solve() == 0){
             setTime(eq.getVariable("t"));
             setInitialVelocity(eq.getVariable("v0"));
             setAcceleration(eq.getVariable("a"));
             setDisplacement(eq.getVariable("x"));
             setInitialDisplacement(eq.getVariable("x0"));
+            equSolved = false;
         }
+
+        if (!equSolved)
+            solve();
     }
 
 }
