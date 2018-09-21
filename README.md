@@ -12,7 +12,7 @@ Variables used:
 	x = displacement in meters
 	t = time in seconds
 
-Put in variables as arguments. To put in an initial velocity of -8.23, use v0:-8.23
+Put in variables as arguments. To put in an initial velocity of -8.23, write v0:-8.23
 Use as many known variables as needed in any order.
 
 example:
