@@ -3,6 +3,7 @@ Calculator for solving simple physics kinematics problems
 
 This program takes in variables, then prints a list of the known and solved variables.
 Program also prints a short statement of the situation.
+
 Variables used:
 
 	a = acceleration in meters/second^2
@@ -13,6 +14,7 @@ Variables used:
 	t = time in seconds
 
 Put in variables as arguments. To put in an initial velocity of -8.23, write v0:-8.23
+
 Use as many known variables as needed in any order.
 
 example:
