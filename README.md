@@ -13,15 +13,14 @@ Variables are:
 	t = time in seconds
 
 use (optional) known variables as arguments in any order
-example:  java kinematicsUI t:2.3 a:-9.8 v0:16.2
-
+example:	java kinematicsUI t:2.3 a:-9.8 v0:16.2
 output:
-a:	-9.8
-v0:	16.2
-v:	-6.34
-x0:	null
-x:	null
-t:	2.3
-
-The particle is moving at 16.2 meters per second, accelerating at a rate of -9.8 meters per second squared.
-After 2.3 seconds, the particle is moving at -6.34 meters per second.
+	a:	-9.8
+	v0:	16.2
+	v:	-6.34
+	x0:	null
+	x:	null
+	t:	2.3
+	
+	The particle is moving at 16.2 meters per second, accelerating at a rate of -9.8 meters per second squared.
+	After 2.3 seconds, the particle is moving at -6.34 meters per second.
