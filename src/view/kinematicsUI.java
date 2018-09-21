@@ -5,17 +5,6 @@
  * very simple user interface for solving kinematics problems,
  * will probably implement javafx later.
  *
- * Variables are:
- * a = acceleration in meters/second^2
- * v0 = initial velocity in meters/second
- * v = velocity in meters/second
- * x0 = initial displacement in meters
- * x = displacement in meters
- * t = time in seconds
- *
- * run this with the known variables as arguments in any order like this example:
- * ~$ java kinematicsUI t:2.3 a:-9.8 v0:16.2
- *
  * */
 package view;
 
@@ -106,9 +95,9 @@ public class kinematicsUI {
 
         if(kC.getVariable("v") != null){
             if(useAnd)
-                System.out.print(", moving at " + String.valueOf(kC.getVariable("x")) + " meters per second");
+                System.out.print(", moving at " + String.valueOf(kC.getVariable("v")) + " meters per second");
             else
-                System.out.print(" the particle is at " + String.valueOf(kC.getVariable("x")) + " meters per second");
+                System.out.print(" the particle is moving at " + String.valueOf(kC.getVariable("v")) + " meters per second");
         }
 
         if(kC.getVariable("x") != null || kC.getVariable("v") != null || kC.getVariable("t") != null)
