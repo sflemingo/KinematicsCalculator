@@ -1,9 +1,9 @@
 # KinematicsCalculator
 Calculator for solving simple physics kinematics problems
 
-Prints a list of all the known and solved variables, followed by a short statement of the situation.
-
-Variables:
+This program takes in variables, then prints a list of the known and solved variables.
+Program also prints a short statement of the situation.
+Variables used:
 
 	a = acceleration in meters/second^2
 	v0 = initial velocity in meters/second
@@ -12,8 +12,10 @@ Variables:
 	x = displacement in meters
 	t = time in seconds
 
+Put in variables as arguments. To put in an initial velocity of -8.23, use v0:-8.23
 Use as many known variables as needed in any order.
-Put in variables as arguments like this:
+
+example:
 
 	java kinematicsUI t:2.3 a:-9.8 v0:16.2
 output:
