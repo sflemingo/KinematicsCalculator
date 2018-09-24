@@ -49,8 +49,14 @@ public class kinematicsUI {
         System.out.println("x:\t" + kC.getVariable("x"));
         System.out.println("t:\t" + kC.getVariable("t"));
 
-        /*  Code below prints out situation as a sentence or two */
+        printStatement(kC);
+    }
 
+    /*
+     * prints a short statement describing the one dimensional motion of the particle
+     * @param kC the kinematicsController with all the solved variables
+     * */
+    public static void printStatement(kinematicsController kC){
         System.out.println();
         boolean useAnd = false;
         if(kC.getVariable("x0") != null || kC.getVariable("v0") != null || kC.getVariable("a") != null)
@@ -102,6 +108,5 @@ public class kinematicsUI {
 
         if(kC.getVariable("x") != null || kC.getVariable("v") != null || kC.getVariable("t") != null)
             System.out.print(".\n");
-
     }
 }
