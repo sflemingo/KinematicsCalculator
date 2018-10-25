@@ -1,15 +1,15 @@
-/*
- * kinematicsUI class
- * view of the KinematicsCalculator
- *
- * very simple user interface for solving kinematics problems,
- * will probably implement javafx later.
- *
- * */
 package view;
 
 import controller.kinematicsController;
 
+/*
+ * kinematicsUI class
+ * view of the KinematicsCalculator
+ *
+ * currently just prints out solutions
+ *
+ * @author Spencer Fleming
+ * */
 public class kinematicsUI {
 
     /*

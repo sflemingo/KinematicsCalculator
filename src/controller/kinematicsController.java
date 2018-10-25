@@ -1,7 +1,3 @@
-/*
- * kinematicsController class
- * connects the model package to the view package
- * */
 package controller;
 
 import model.*;
@@ -9,6 +5,12 @@ import model.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * kinematicsController class
+ * connects the model package to the view package
+ *
+ * @author Spencer Fleming
+ * */
 public class kinematicsController {
 
     //map of known variables
