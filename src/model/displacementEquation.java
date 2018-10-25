@@ -1,20 +1,39 @@
-/*
- * displacementEquation class
- * solves x = x0 + (1/2)(v0 + v)t
- * */
-
 package model;
 
 import java.util.Map;
 
-public class displacementEquation extends Equation {
+/*
+ * displacementEquation class
+ * solves x = x0 + (1/2)(v0 + v)t
+ *
+ * @author Spencer Fleming
+ * */
+public class displacementEquation implements Equation {
+
+    private Double x0, x, v0, v, a, t;
 
     /*
-     * constructor for Equation class
+     * constructor for displacementEquation class
      * @param variables the known/unknown variables
      * */
     public displacementEquation(Map<String, Double> variables){
-        super(variables);
+        this.x0 = variables.get("x0");
+        this.x = variables.get("x");
+        this.v0 = variables.get("v0");
+        this.v = variables.get("v");
+        this.a = variables.get("a");
+        this.t = variables.get("t");
+    }
+
+    @Override
+    public Double getVariable(String variable){
+        if (variable.equals("x0")) return x0;
+        if (variable.equals("x")) return x;
+        if (variable.equals("v0")) return v0;
+        if (variable.equals("v")) return v;
+        if (variable.equals("a")) return a;
+        if (variable.equals("t")) return t;
+        return null;
     }
 
     @Override
