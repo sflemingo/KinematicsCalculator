@@ -3,20 +3,20 @@ package model;
 import java.util.Map;
 
 /*
- * displacementEquation class
+ * DisplacementEquation class
  * solves x = x0 + (1/2)(v0 + v)t
  *
  * @author Spencer Fleming
  * */
-public class displacementEquation implements Equation {
+public class DisplacementEquation implements Equation {
 
     private Double x0, x, v0, v, a, t;
 
     /*
-     * constructor for displacementEquation class
+     * constructor for DisplacementEquation class
      * @param variables the known/unknown variables
      * */
-    public displacementEquation(Map<String, Double> variables){
+    public DisplacementEquation(Map<String, Double> variables){
         this.x0 = variables.get("x0");
         this.x = variables.get("x");
         this.v0 = variables.get("v0");

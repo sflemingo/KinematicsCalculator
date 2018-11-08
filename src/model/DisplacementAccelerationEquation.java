@@ -3,12 +3,12 @@ package model;
 import java.util.Map;
 
 /*
- * displacementAccelerationEquation class
+ * DisplacementAccelerationEquation class
  * solves x = x0 + v0(t) + (1/2)(a)t^2
  *
  * @author Spencer Fleming
  * */
-public class displacementAccelerationEquation implements Equation {
+public class DisplacementAccelerationEquation implements Equation {
 
     private Double x0, x, v0, v, a, t;
 
@@ -16,7 +16,7 @@ public class displacementAccelerationEquation implements Equation {
      * constructor for Equation class
      * @param variables the known/unknown variables
      * */
-    public displacementAccelerationEquation(Map<String, Double> variables){
+    public DisplacementAccelerationEquation(Map<String, Double> variables){
         this.x0 = variables.get("x0");
         this.x = variables.get("x");
         this.v0 = variables.get("v0");

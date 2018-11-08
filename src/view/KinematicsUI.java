@@ -1,22 +1,22 @@
 package view;
 
-import controller.kinematicsController;
+import controller.KinematicsController;
 
 /*
- * kinematicsUI class
+ * KinematicsUI class
  * view of the KinematicsCalculator
  *
  * currently just prints out solutions
  *
  * @author Spencer Fleming
  * */
-public class kinematicsUI {
+public class KinematicsUI {
 
     /*
-     * main method for the kinematicsUI
+     * main method for the KinematicsUI
      * */
     public static void main(String args[]){
-        kinematicsController kC = new kinematicsController();
+        KinematicsController kC = new KinematicsController();
 
         kC.setAcceleration(null);
         kC.setInitialVelocity(null);
@@ -54,9 +54,9 @@ public class kinematicsUI {
 
     /*
      * prints a short statement describing the one dimensional motion of the particle
-     * @param kC the kinematicsController with all the solved variables
+     * @param kC the KinematicsController with all the solved variables
      * */
-    public static void printStatement(kinematicsController kC){
+    public static void printStatement(KinematicsController kC){
         System.out.println();
         boolean useAnd = false;
         if(kC.getVariable("x0") != null || kC.getVariable("v0") != null || kC.getVariable("a") != null)

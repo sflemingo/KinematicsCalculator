@@ -6,20 +6,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- * kinematicsController class
+ * KinematicsController class
  * connects the model package to the view package
  *
  * @author Spencer Fleming
  * */
-public class kinematicsController {
+public class KinematicsController {
 
     //map of known variables
     private Map<String, Double> variables;
 
     /*
-     * constructor for kinematicsController class
+     * constructor for KinematicsController class
      * */
-    public kinematicsController(){
+    public KinematicsController(){
         variables = new HashMap<>();
     }
 
@@ -63,7 +63,7 @@ public class kinematicsController {
      * */
     public void solve(){
         boolean equSolved = true;
-        Equation eq = new velocityEquation(variables);
+        Equation eq = new VelocityEquation(variables);
 
         if (eq.solve() == 0){
             setVelocity(eq.getVariable("v"));
@@ -73,7 +73,7 @@ public class kinematicsController {
             equSolved = false;
         }
 
-        eq = new velocitySqEquation(variables);
+        eq = new VelocitySqEquation(variables);
         if (eq.solve() == 0){
             setVelocity(eq.getVariable("v"));
             setInitialVelocity(eq.getVariable("v0"));
@@ -83,7 +83,7 @@ public class kinematicsController {
             equSolved = false;
         }
 
-        eq = new displacementEquation(variables);
+        eq = new DisplacementEquation(variables);
         if (eq.solve() == 0){
             setVelocity(eq.getVariable("v"));
             setInitialVelocity(eq.getVariable("v0"));
@@ -93,7 +93,7 @@ public class kinematicsController {
             equSolved = false;
         }
 
-        eq = new displacementAccelerationEquation(variables);
+        eq = new DisplacementAccelerationEquation(variables);
         if (eq.solve() == 0){
             setTime(eq.getVariable("t"));
             setInitialVelocity(eq.getVariable("v0"));

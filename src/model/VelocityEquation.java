@@ -3,20 +3,20 @@ package model;
 import java.util.Map;
 
 /*
- * velocityEquation class
+ * VelocityEquation class
  * solves v = v0 + a(t)
  *
  * @author Spencer Fleming
  * */
-public class velocityEquation implements Equation {
+public class VelocityEquation implements Equation {
 
     private Double x0, x, v0, v, a, t;
 
     /*
-     * constructor for velocityEquation class
+     * constructor for VelocityEquation class
      * @param variables the known/unknown variables
      * */
-    public velocityEquation(Map<String, Double> variables){
+    public VelocityEquation(Map<String, Double> variables){
         this.x0 = variables.get("x0");
         this.x = variables.get("x");
         this.v0 = variables.get("v0");

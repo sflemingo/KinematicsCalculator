@@ -3,20 +3,20 @@ package model;
 import java.util.Map;
 
 /*
- * velocitySqEquation class
+ * VelocitySqEquation class
  * solves v^2 = (v0)^2 + 2(a)(x - x0)
  *
  * @author Spencer Fleming
  * */
-public class velocitySqEquation implements Equation {
+public class VelocitySqEquation implements Equation {
 
     private Double x0, x, v0, v, a, t;
 
     /*
-     * constructor for velocitySqEquation class
+     * constructor for VelocitySqEquation class
      * @param variables the known/unknown variables
      * */
-    public velocitySqEquation(Map<String, Double> variables){
+    public VelocitySqEquation(Map<String, Double> variables){
         this.x0 = variables.get("x0");
         this.x = variables.get("x");
         this.v0 = variables.get("v0");
