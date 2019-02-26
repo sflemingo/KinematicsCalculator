@@ -4,9 +4,8 @@ import controller.KinematicsController;
 
 /*
  * KinematicsUI class
- * view of the KinematicsCalculator
  *
- * currently just prints out solutions
+ * takes in command line arguments and prints out solution
  *
  * @author Spencer Fleming
  * */
