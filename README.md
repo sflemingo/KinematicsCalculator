@@ -1,6 +1,10 @@
 # KinematicsCalculator
 Calculator for solving simple physics kinematics problems
 
+KinematicsGUI:
+This program provides a gui for the kinematics calculator.
+
+KinematicsUI:
 This program takes in variables, then prints a list of the known and solved variables.
 Program also prints a short statement of the situation.
 
